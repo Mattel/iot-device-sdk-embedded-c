@@ -563,7 +563,7 @@ iotc_state_t iotc_publish_data(iotc_context_handle_t iotc_h, const char* topic,
 
   iotc_state_t state = IOTC_STATE_OK;
 
-  iotc_data_desc_t* data_desc = iotc_make_desc_from_buffer_copy(data, data_len);
+  iotc_data_desc_t* data_desc = iotc_make_desc_from_buffer_share(data, data_len);
 
   IOTC_CHECK_MEMORY(data_desc, state);
 
